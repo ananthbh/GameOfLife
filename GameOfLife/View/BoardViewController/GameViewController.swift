@@ -33,22 +33,29 @@ final class GameViewController: UIViewController {
     @IBOutlet private weak var resetButton: UIButton!
     @IBOutlet private weak var infoLabel: UILabel!
     
+    /// Game should run for 3 generations.
+    private let numberOfGenerationsToRun = 3;
+    
     // MARK: Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupInitialUI()
+        setupInitialBoard()
     }
 
     // MARK: Actions
     
     @IBAction private func startAction(_ sender: Any) {
+        guard !viewModel.gameOngoing else { return }
+        startGame()
     }
     
     @IBAction private func resetAction(_ sender: Any) {
+        guard !viewModel.gameOngoing else { return }
+        setupInitialBoard()
     }
-    
 }
 
 extension GameViewController: GameViewControllerUIDelegate {
@@ -77,5 +84,13 @@ private extension GameViewController {
         
         resetButton.layer.borderWidth = 1.0
         resetButton.layer.borderColor = UIColor.systemBlue.cgColor
+    }
+    
+    private func setupInitialBoard() {
+        viewModel.setBoardToInitial()
+    }
+    
+    private func startGame() {
+        viewModel.startGame(for: numberOfGenerationsToRun)
     }
 }

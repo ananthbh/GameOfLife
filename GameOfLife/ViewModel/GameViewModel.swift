@@ -15,6 +15,7 @@ protocol GameViewModel {
 
 final class GameViewModelLogic {
     private var cells = [Cell]()
+    /// 10 x10 game board.
     private var size: Int = 10
     private var boardActionInProcess = false;
     
