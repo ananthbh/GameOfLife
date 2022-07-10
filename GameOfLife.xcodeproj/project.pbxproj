@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1858C806287B476F009E8040 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858C805287B476F009E8040 /* Cell.swift */; };
 		1858C807287B476F009E8040 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858C805287B476F009E8040 /* Cell.swift */; };
+		1858C80A287B47C4009E8040 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858C809287B47C4009E8040 /* BoardView.swift */; };
 		18AB4946287B439A00D3546B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB4945287B439A00D3546B /* AppDelegate.swift */; };
 		18AB4948287B439A00D3546B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB4947287B439A00D3546B /* SceneDelegate.swift */; };
 		18AB494F287B439B00D3546B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AB494E287B439B00D3546B /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		1858C805287B476F009E8040 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		1858C809287B47C4009E8040 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		18AB4942287B439A00D3546B /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AB4945287B439A00D3546B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18AB4947287B439A00D3546B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1858C808287B47A6009E8040 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1858C809287B47C4009E8040 /* BoardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18AB4939287B439A00D3546B = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		18AB4944287B439A00D3546B /* GameOfLife */ = {
 			isa = PBXGroup;
 			children = (
+				1858C808287B47A6009E8040 /* View */,
 				1858C804287B4761009E8040 /* Model */,
 				1858C800287B46EF009E8040 /* Common */,
 				18AB494E287B439B00D3546B /* Assets.xcassets */,
@@ -212,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18AB4946287B439A00D3546B /* AppDelegate.swift in Sources */,
+				1858C80A287B47C4009E8040 /* BoardView.swift in Sources */,
 				18AB4948287B439A00D3546B /* SceneDelegate.swift in Sources */,
 				1858C806287B476F009E8040 /* Cell.swift in Sources */,
 			);
