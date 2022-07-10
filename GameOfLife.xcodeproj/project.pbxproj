@@ -14,6 +14,8 @@
 		1858C80E287B48D8009E8040 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858C80B287B48D8009E8040 /* GameViewController.swift */; };
 		1858C80F287B48D8009E8040 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1858C80C287B48D8009E8040 /* GameViewController.xib */; };
 		1858C810287B48D8009E8040 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1858C80C287B48D8009E8040 /* GameViewController.xib */; };
+		1858C814287B4D68009E8040 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858C813287B4D68009E8040 /* GameViewModel.swift */; };
+		1858C815287B4D68009E8040 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858C813287B4D68009E8040 /* GameViewModel.swift */; };
 		18AB4946287B439A00D3546B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB4945287B439A00D3546B /* AppDelegate.swift */; };
 		18AB4948287B439A00D3546B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB4947287B439A00D3546B /* SceneDelegate.swift */; };
 		18AB494F287B439B00D3546B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AB494E287B439B00D3546B /* Assets.xcassets */; };
@@ -36,6 +38,7 @@
 		1858C809287B47C4009E8040 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		1858C80B287B48D8009E8040 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1858C80C287B48D8009E8040 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		1858C813287B4D68009E8040 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		18AB4942287B439A00D3546B /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AB4945287B439A00D3546B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18AB4947287B439A00D3546B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +102,14 @@
 			path = BoardViewController;
 			sourceTree = "<group>";
 		};
+		1858C812287B4D5A009E8040 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1858C813287B4D68009E8040 /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		18AB4939287B439A00D3546B = {
 			isa = PBXGroup;
 			children = (
@@ -120,8 +131,9 @@
 		18AB4944287B439A00D3546B /* GameOfLife */ = {
 			isa = PBXGroup;
 			children = (
-				1858C808287B47A6009E8040 /* View */,
 				1858C804287B4761009E8040 /* Model */,
+				1858C808287B47A6009E8040 /* View */,
+				1858C812287B4D5A009E8040 /* ViewModel */,
 				1858C800287B46EF009E8040 /* Common */,
 				18AB494E287B439B00D3546B /* Assets.xcassets */,
 				18AB4950287B439B00D3546B /* LaunchScreen.storyboard */,
@@ -240,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1858C814287B4D68009E8040 /* GameViewModel.swift in Sources */,
 				1858C80D287B48D8009E8040 /* GameViewController.swift in Sources */,
 				18AB4946287B439A00D3546B /* AppDelegate.swift in Sources */,
 				1858C80A287B47C4009E8040 /* BoardView.swift in Sources */,
@@ -252,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1858C815287B4D68009E8040 /* GameViewModel.swift in Sources */,
 				18AB495D287B439B00D3546B /* GameOfLifeTests.swift in Sources */,
 				1858C80E287B48D8009E8040 /* GameViewController.swift in Sources */,
 				1858C807287B476F009E8040 /* Cell.swift in Sources */,
