@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol GameViewControllerUIDelegate {
+    func updateUI(cells: [Cell], currentGeneration: Int)
+}
+
 final class GameViewController: UIViewController {
     
     // MARK: Init
@@ -45,6 +49,21 @@ final class GameViewController: UIViewController {
     @IBAction private func resetAction(_ sender: Any) {
     }
     
+}
+
+extension GameViewController: GameViewControllerUIDelegate {
+    func updateUI(cells: [Cell], currentGeneration: Int) {
+        /// update board UI.
+        boardView.updateView(cells: cells)
+        
+        /// update info label.
+        if (currentGeneration == 0) {
+            /// reset or initial state if currentGen is 0.
+            infoLabel.text = "Tap on Start button below"
+            return
+        }
+        infoLabel.text = "Generation \(currentGeneration)"
+    }
 }
 
 private extension GameViewController {

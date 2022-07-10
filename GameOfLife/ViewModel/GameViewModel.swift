@@ -13,6 +13,7 @@ protocol GameViewModel {
 
 final class GameViewModelLogic {
     
+    var delegate: GameViewControllerUIDelegate?
 }
 
 extension GameViewModelLogic: GameViewModel {
