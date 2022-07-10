@@ -27,6 +27,13 @@ final class GameViewModelLogic {
     }
 }
 
+extension GameViewModelLogic {
+    /// since the initial cells are generated randomly, Using this method to pass the cells for testing.
+    internal func setInitialCells(cells: [Cell]) {
+        self.cells = cells
+    }
+}
+
 extension GameViewModelLogic: GameViewModel {
     /// setup initial cells or reset the cells.
     public func setBoardToInitial() {

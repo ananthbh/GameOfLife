@@ -40,4 +40,4 @@ After 3rd Generation:
 
 - https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 - https://playgameoflife.com
-
+- https://leetcode.com/problems/game-of-life/

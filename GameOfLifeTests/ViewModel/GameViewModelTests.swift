@@ -73,8 +73,69 @@ class GameViewModelTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 1, handler: nil)
-        XCTAssertEqual(sut.gameOngoing, false)
+        self.waitForExpectations(timeout: 30, handler: nil)
+        
+        XCTAssertFalse(sut.gameOngoing)
+    }
+    
+    func test_givenViewModel_whenStartGameIsCalled_thenMatchCells() {
+        // execute test case from https://leetcode.com/problems/game-of-life/
+        let initialCells: [Cell] = [
+            Cell(x: 0, y: 0, state: .dead),
+            Cell(x: 0, y: 1, state: .live),
+            Cell(x: 0, y: 2, state: .dead),
+            Cell(x: 1, y: 0, state: .dead),
+            Cell(x: 1, y: 1, state: .dead),
+            Cell(x: 1, y: 2, state: .live),
+            Cell(x: 2, y: 0, state: .live),
+            Cell(x: 2, y: 1, state: .live),
+            Cell(x: 2, y: 2, state: .live),
+            Cell(x: 3, y: 0, state: .dead),
+            Cell(x: 3, y: 1, state: .dead),
+            Cell(x: 3, y: 2, state: .dead)
+        ]
+        
+        let resultCells: [Cell] = [
+            Cell(x: 0, y: 0, state: .dead),
+            Cell(x: 0, y: 1, state: .dead),
+            Cell(x: 0, y: 2, state: .dead),
+            Cell(x: 1, y: 0, state: .live),
+            Cell(x: 1, y: 1, state: .dead),
+            Cell(x: 1, y: 2, state: .live),
+            Cell(x: 2, y: 0, state: .dead),
+            Cell(x: 2, y: 1, state: .live),
+            Cell(x: 2, y: 2, state: .live),
+            Cell(x: 3, y: 0, state: .dead),
+            Cell(x: 3, y: 1, state: .live),
+            Cell(x: 3, y: 2, state: .dead)
+        ]
+        
+        sut.setInitialCells(cells: initialCells)
+        sut.startGame(for: 1)
+        
+        XCTAssertEqual(resultCells, delegate.mockCells)
+    }
+    
+    func test_givenViewModel_whenStartGameIsCalled_thenMatchCells2() {
+        // execute test case from https://leetcode.com/problems/game-of-life/
+        let initialCells: [Cell] = [
+            Cell(x: 0, y: 0, state: .live),
+            Cell(x: 0, y: 1, state: .live),
+            Cell(x: 1, y: 0, state: .live),
+            Cell(x: 1, y: 1, state: .dead)
+        ]
+        
+        let resultCells: [Cell] = [
+            Cell(x: 0, y: 0, state: .live),
+            Cell(x: 0, y: 1, state: .live),
+            Cell(x: 1, y: 0, state: .live),
+            Cell(x: 1, y: 1, state: .live)
+        ]
+        
+        sut.setInitialCells(cells: initialCells)
+        sut.startGame(for: 1)
+        
+        XCTAssertEqual(resultCells, delegate.mockCells)
     }
     
 }
