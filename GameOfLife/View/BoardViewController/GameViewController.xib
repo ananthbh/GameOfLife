@@ -23,14 +23,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69i-38-uj5" customClass="BoardView" customModule="GameOfLife" customModuleProvider="target">
-                    <rect key="frame" x="20.5" y="261.5" width="373" height="373"/>
+                    <rect key="frame" x="20.5" y="217" width="373" height="372.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="69i-38-uj5" secondAttribute="height" multiplier="1:1" id="mVX-h7-5gB"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRd-7c-Sjw">
-                    <rect key="frame" x="94" y="654.5" width="60" height="30"/>
+                    <rect key="frame" x="94" y="609.5" width="60" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="fPP-AA-R0D"/>
                     </constraints>
@@ -41,7 +41,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5g-yP-YTJ">
-                    <rect key="frame" x="260" y="654.5" width="60" height="30"/>
+                    <rect key="frame" x="260" y="609.5" width="60" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="YQl-kk-CPJ"/>
                     </constraints>
@@ -52,20 +52,20 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69M-ps-Eca">
-                    <rect key="frame" x="20" y="231.5" width="374" height="0.0"/>
+                    <rect key="frame" x="20" y="187" width="374" height="0.0"/>
                     <accessibility key="accessibilityConfiguration" identifier="infoLabel"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legend:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCa-aG-ceO">
-                    <rect key="frame" x="20" y="714.5" width="374" height="20.5"/>
+                    <rect key="frame" x="20" y="669.5" width="374" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbP-aA-WJv">
-                    <rect key="frame" x="20" y="745" width="374" height="50"/>
+                    <rect key="frame" x="20" y="700" width="374" height="50"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nVW-WP-6ND">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -122,7 +122,7 @@
                 <constraint firstItem="LCa-aG-ceO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="FyL-si-y01"/>
                 <constraint firstItem="LCa-aG-ceO" firstAttribute="top" secondItem="aRd-7c-Sjw" secondAttribute="bottom" constant="30" id="HXZ-ni-ldq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cbP-aA-WJv" secondAttribute="trailing" constant="20" id="Iee-Hv-qNY"/>
-                <constraint firstItem="69i-38-uj5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Yd2-Kb-qaI"/>
+                <constraint firstItem="69i-38-uj5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.9" id="Yd2-Kb-qaI"/>
                 <constraint firstItem="69i-38-uj5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eJX-2p-w72"/>
                 <constraint firstItem="69i-38-uj5" firstAttribute="top" secondItem="69M-ps-Eca" secondAttribute="bottom" constant="30" id="hgC-vx-yqJ"/>
                 <constraint firstItem="L5g-yP-YTJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.4" id="m6R-hT-TBe"/>
