@@ -47,6 +47,23 @@ class GameViewModelTests: XCTestCase {
         sut.startGame(for: 3)
         XCTAssertTrue(sut.gameOngoing)
     }
+    
+    // MARK: Test Logic
+    
+    func test_givenViewModel_whenStartGameIsCalled_thenCellsAreUpdated() {
+        let mirror = Mirror(reflecting: sut.self!)
+        sut.startGame(for: 3)
+        let currentViewModelCells: [Cell] = mirror.children.first(where: { $0.label == "cells" })?.value as! [Cell]
+        XCTAssertEqual(currentViewModelCells, delegate.mockCells)
+    }
+    
+    func test_givenViewModel_whenResetIsCalled_thenCellsAreUpdated() {
+        let mirror = Mirror(reflecting: sut.self!)
+        sut.setBoardToInitial()
+        let currentViewModelCells: [Cell] = mirror.children.first(where: { $0.label == "cells" })?.value as! [Cell]
+        XCTAssertEqual(currentViewModelCells, delegate.mockCells)
+    }
+    
 }
 
 private final class GameViewControllerUIDelegateSpy: GameViewControllerUIDelegate {
