@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let gameViewController = GameViewController()
+        let gameViewModel = GameViewModelLogic()
+        let gameViewController = GameViewController(viewModel: gameViewModel)
         let navigationController = UINavigationController(rootViewController: gameViewController)
         
         window.rootViewController = navigationController

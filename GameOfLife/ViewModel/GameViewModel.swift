@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol GameViewModel {
+    
+}
+
+final class GameViewModelLogic {
+    
+}
+
+extension GameViewModelLogic: GameViewModel {
+    
+}
