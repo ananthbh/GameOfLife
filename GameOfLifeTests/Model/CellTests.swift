@@ -7,7 +7,7 @@
 
 import XCTest
 
-class CellTests: XCTestCase {
+final class CellTests: XCTestCase {
     // MARK: Subject under test
     
     private var sut: Cell!
