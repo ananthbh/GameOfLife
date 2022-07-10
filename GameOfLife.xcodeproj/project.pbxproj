@@ -53,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1858C800287B46EF009E8040 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				18AB4945287B439A00D3546B /* AppDelegate.swift */,
+				18AB4947287B439A00D3546B /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		18AB4939287B439A00D3546B = {
 			isa = PBXGroup;
 			children = (
@@ -74,8 +83,7 @@
 		18AB4944287B439A00D3546B /* GameOfLife */ = {
 			isa = PBXGroup;
 			children = (
-				18AB4945287B439A00D3546B /* AppDelegate.swift */,
-				18AB4947287B439A00D3546B /* SceneDelegate.swift */,
+				1858C800287B46EF009E8040 /* Common */,
 				18AB494E287B439B00D3546B /* Assets.xcassets */,
 				18AB4950287B439B00D3546B /* LaunchScreen.storyboard */,
 				18AB4953287B439B00D3546B /* Info.plist */,
