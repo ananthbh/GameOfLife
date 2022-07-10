@@ -64,6 +64,19 @@ class GameViewModelTests: XCTestCase {
         XCTAssertEqual(currentViewModelCells, delegate.mockCells)
     }
     
+    func test_givenViewModel_whenStartGameIsCalled_thenGameOngoingIsFalse() {
+        sut.startGame(for: 1)
+        XCTAssertEqual(sut.gameOngoing, true)
+        
+        let expectation = expectation(description: "Wait for main thread async after to execute")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 1, handler: nil)
+        XCTAssertEqual(sut.gameOngoing, false)
+    }
+    
 }
 
 private final class GameViewControllerUIDelegateSpy: GameViewControllerUIDelegate {

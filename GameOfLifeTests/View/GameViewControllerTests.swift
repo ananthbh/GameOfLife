@@ -36,7 +36,7 @@ class GameViewControllerTests: XCTestCase {
         sut = GameViewController(viewModel: viewModel)
         sut.loadView()
     }
-    
+        
     // MARK: View Loaded
     
     func test_givenScene_whenViewIsLoaded_thenloadViewIsCalled() {
@@ -46,6 +46,15 @@ class GameViewControllerTests: XCTestCase {
     func test_givenScene_whenViewDidLoad_thenSetBoardToInitialIsCalled() {
         sut.viewDidLoad()
         XCTAssertTrue(viewModel.setBoardToInitialCalled)
+    }
+    
+    // MARK: View Not Loaded
+    
+    func testInitWithCoder() {
+        let data = try! NSKeyedArchiver.archivedData(withRootObject: sut!, requiringSecureCoding: false)
+        let coder = try! NSKeyedUnarchiver(forReadingFrom: data)
+        sut = GameViewController(coder: coder)
+        XCTAssertNotNil(sut)
     }
     
     // MARK: UI Interaction
